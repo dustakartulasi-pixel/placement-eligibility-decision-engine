@@ -11,10 +11,10 @@ public class Main {
         int backlogs = sc.nextInt();
         System.out.print("Enter Graducate year: ");
         int year = sc.nextInt();
-        System.out.println("Candidate: " + name);
-        System.out.println("Percentage: " + Percentage);
-        System.out.println("BackLogs: " + backlogs);
-        System.out.println("Graducate year: " + year);
+        System.out.println("Candidate:  " + name);
+        System.out.println("Percentage:  " + Percentage);
+        System.out.println("BackLogs:  " + backlogs);
+        System.out.println("Graducate year:  " + year);
 
     }
 }
