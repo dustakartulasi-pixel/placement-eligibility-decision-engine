@@ -17,6 +17,11 @@ public class Main {
         System.out.println("Percentage:  " + canobj.getPercentage());
         System.out.println("BackLogs:  " + canobj.getBacklogs());
         System.out.println("Graducate year:  " + canobj.getYear());
+        System.out.println("Company: " + jobobj.getCompany());
+        System.out.println("Role: " + jobobj.getRole());
+        System.out.println("Minimum Percentage: " + jobobj.getMinPer());
+        System.out.println("Maximum Backlogs: " + jobobj.getMaxBacklog());
+        System.out.println("Required Graducate Year: " + jobobj.getReqYear());
 
     }
 }
