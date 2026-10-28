@@ -12,7 +12,7 @@ public class Main {
         System.out.print("Enter Graducate year: ");
         int year = sc.nextInt();
         Candidate canobj = new Candidate(name, Percentage, backlogs, year);
-
+        Job jobobj = new Job("Amazan", "Software Developer", 65, 0, 2026);
         System.out.println("Candidate:  " + canobj.getName());
         System.out.println("Percentage:  " + canobj.getPercentage());
         System.out.println("BackLogs:  " + canobj.getBacklogs());
