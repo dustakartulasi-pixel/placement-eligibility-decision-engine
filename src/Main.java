@@ -11,10 +11,12 @@ public class Main {
         int backlogs = sc.nextInt();
         System.out.print("Enter Graducate year: ");
         int year = sc.nextInt();
-        System.out.println("Candidate:  " + name);
-        System.out.println("Percentage:  " + Percentage);
-        System.out.println("BackLogs:  " + backlogs);
-        System.out.println("Graducate year:  " + year);
+        Candidate canobj = new Candidate(name, Percentage, backlogs, year);
+
+        System.out.println("Candidate:  " + canobj.getName());
+        System.out.println("Percentage:  " + canobj.getPercentage());
+        System.out.println("BackLogs:  " + canobj.getBacklogs());
+        System.out.println("Graducate year:  " + canobj.getYear());
 
     }
 }
