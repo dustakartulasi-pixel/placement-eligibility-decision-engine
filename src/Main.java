@@ -11,17 +11,48 @@ public class Main {
         int backlogs = sc.nextInt();
         System.out.print("Enter Graducate year: ");
         int year = sc.nextInt();
+
         Candidate canobj = new Candidate(name, Percentage, backlogs, year);
         Job jobobj = new Job("Amazan", "Software Developer", 65, 0, 2026);
-        System.out.println("Candidate:  " + canobj.getName());
-        System.out.println("Percentage:  " + canobj.getPercentage());
-        System.out.println("BackLogs:  " + canobj.getBacklogs());
-        System.out.println("Graducate year:  " + canobj.getYear());
+
+        boolean percentagePass = canobj.getPercentage() >= jobobj.getMinPer();
+        boolean backlogPass = canobj.getBacklogs() <= jobobj.getMaxBacklog();
+        boolean yearPass = canobj.getYear() == jobobj.getReqYear();
+        boolean eligible = percentagePass && backlogPass && yearPass;
+
+        System.out.println("---------------------------------");
+        System.out.println("PLACEMENT ELIGIBILITY RESULT");
+        System.out.println("---------------------------------");
+        System.out.println();
+
+        System.out.println("Candidate: " + canobj.getName());
         System.out.println("Company: " + jobobj.getCompany());
         System.out.println("Role: " + jobobj.getRole());
-        System.out.println("Minimum Percentage: " + jobobj.getMinPer());
-        System.out.println("Maximum Backlogs: " + jobobj.getMaxBacklog());
-        System.out.println("Required Graducate Year: " + jobobj.getReqYear());
+        System.out.println();
 
+        if (percentagePass) {
+            System.out.println("Percentage: PASS");
+        } else {
+            System.out.println("Percentage: FAIL");
+        }
+
+        if (backlogPass) {
+            System.out.println("Backlogs: PASS");
+        } else {
+            System.out.println("Backlogs: FAIL");
+        }
+
+        if (yearPass) {
+            System.out.println("Graduation Year: PASS");
+        } else {
+            System.out.println("Graduation Year: FAIL");
+        }
+
+        System.out.println();
+        if (eligible) {
+            System.out.println("Final Result: ELIGIBLE");
+        } else {
+            System.out.println("Final Result: NOT ELIGIBLE");
+        }
     }
 }
