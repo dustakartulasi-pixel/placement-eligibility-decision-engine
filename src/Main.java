@@ -15,9 +15,7 @@ public class Main {
         Candidate canobj = new Candidate(name, Percentage, backlogs, year);
         Job jobobj = new Job("Amazan", "Software Developer", 65, 0, 2026);
 
-        PercentageRule percentageRule = new PercentageRule();
-        BacklogRule backlogRule = new BacklogRule();
-        GraduationYearRule yearRule = new GraduationYearRule();
+        EligibilityRule[] rules = { new PercentageRule(), new BacklogRule(), new GraduationYearRule() };
 
         boolean percentagePass = percentageRule.check(canobj, jobobj);
         boolean backlogPass = backlogRule.check(canobj, jobobj);
