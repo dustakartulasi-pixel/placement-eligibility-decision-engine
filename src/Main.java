@@ -16,6 +16,7 @@ public class Main {
         Job jobobj = new Job("Amazan", "Software Developer", 65, 0, 2026);
 
         PercentageRule percentageRule = new PercentageRule();
+        boolean percentagePass = percentageRule.check(canobj, jobobj);
         boolean backlogPass = canobj.getBacklogs() <= jobobj.getMaxBacklog();
         boolean yearPass = canobj.getYear() == jobobj.getReqYear();
         boolean eligible = percentagePass && backlogPass && yearPass;
